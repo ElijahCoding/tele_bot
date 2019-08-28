@@ -36,7 +36,7 @@ class BotController extends Controller
      */
     public function setWebhook()
     {
-        $url = "https://fe4bd30e.ngrok.io";
+        $url = "https://97ab4fce.ngrok.io/bot/webhook";
         return $this->telegram->setWebhook(['url' => $url]);
     }
 
