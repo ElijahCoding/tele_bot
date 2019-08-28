@@ -59,6 +59,6 @@ class BotController extends Controller
      */
     public function webhookHandler()
     {
-        return $this->telegram->commandsHandler(true);
+        $this->telegram->commandsHandler(true);
     }
 }
