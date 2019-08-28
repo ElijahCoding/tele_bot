@@ -2,6 +2,7 @@
 
 namespace App\Commands\Telegram;
 
+use Telegram;
 use Telegram\Bot\Actions;
 use Telegram\Bot\Commands\Command;
 
@@ -25,6 +26,24 @@ class StartCommand extends Command
      */
     public function handle($arguments)
     {
-         $this->replyWithMessage(['text' => 'Hello!']);
+       return Telegram::sendMessage([
+           'text' => 'Phone number',
+           'chat_id' => '593670895',
+            'reply_markup' => json_encode(
+                array (
+                    "keyboard" => array(
+                        array(
+                            array(
+                                "text" => "contact",
+                                "request_contact" => true
+                            ),
+                        )
+                    ),
+                    "one_time_keyboard" => true, // Can be FALSE (hide keyboard after click)
+                    "resize_keyboard" => true // Can be FALSE (vertical resize)
+                )
+            )
+        ]);
     }
+
 }
