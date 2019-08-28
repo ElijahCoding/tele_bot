@@ -8,7 +8,7 @@
 |
 | NOTE: THIS WILL NOT WORK IF WEBHOOK IS ENABLED.
 */
-Route::get('/bot/updates', 'BotController@getUpdates')->name('bot-updates');
+Route::get('/updates', 'BotController@getUpdates')->name('bot-updates');
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ Route::get('/bot/updates', 'BotController@getUpdates')->name('bot-updates');
 |
 | Example: http://domain.com/bot/set-webhook
 */
-Route::get('/bot/set-webhook', 'BotController@setWebhook')->name('bot-set-webhook');
+Route::get('/set-webhook', 'BotController@setWebhook')->name('bot-set-webhook');
 
 /*
 |--------------------------------------------------------------------------
@@ -30,7 +30,7 @@ Route::get('/bot/set-webhook', 'BotController@setWebhook')->name('bot-set-webhoo
 |
 | Example: http://domain.com/bot/remove-webhook
 */
-Route::get('/bot/remove-webhook', 'BotController@removeWebhook')->name('bot-remove-webhook');
+Route::get('/remove-webhook', 'BotController@removeWebhook')->name('bot-remove-webhook');
 
 /*
 |--------------------------------------------------------------------------
@@ -45,4 +45,4 @@ Route::get('/bot/remove-webhook', 'BotController@removeWebhook')->name('bot-remo
 | THEN SET THAT WEBHOOK WITH TELEGRAM.
 | SO YOU CAN BE SURE THE UPDATES ARE COMING FROM TELEGRAM ONLY.
 */
-Route::post('/bot/webhook', 'BotController@webhookHandler')->name('bot-webhook');
+Route::post('/webhook', 'BotController@webhookHandler')->name('bot-webhook');

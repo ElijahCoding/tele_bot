@@ -26,7 +26,7 @@ class StartCommand extends Command
      */
     public function handle($arguments)
     {
-       return Telegram::sendMessage([
+       Telegram::sendMessage([
            'text' => 'Phone number',
            'chat_id' => '593670895',
             'reply_markup' => json_encode(
@@ -40,10 +40,11 @@ class StartCommand extends Command
                         )
                     ),
                     "one_time_keyboard" => true, // Can be FALSE (hide keyboard after click)
-                    "resize_keyboard" => true // Can be FALSE (vertical resize)
                 )
             )
         ]);
+
+
     }
 
 }
